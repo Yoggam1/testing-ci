@@ -13,9 +13,9 @@ jobs:
     steps:      
       - name: Increment version code
         env:
-          NUM: ${{ github.run_attempt }}
+          NUM: ${{ github.run_number }}
         run: |
           echo "VERSION_CODE=$(($NUM + $INITIAL_VERSION_CODE))" >> $GITHUB_ENV
 
       - name: 'Perform Operation with ID ${{ env.VERSION_CODE }}'
-        run: echo "Success!"
+        run: echo "Success! ${{ env.VERSION_CODE }}"
