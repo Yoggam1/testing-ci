@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  INITIAL_VERSION_CODE: ${{ secrets.SLACK_WEBHOOK_DVELOPMENT_ANDROID }}
+  INITIAL_VERSION_CODE: ${{ 1000 }}
 
 jobs:
   test:
