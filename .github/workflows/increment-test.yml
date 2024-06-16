@@ -13,7 +13,7 @@ jobs:
     steps:      
       - name: Increment version code
         env:
-          NUM: ${{ github.run_number }}
+          NUM: ${{ github.run_attempt }}
         run: |
           echo "VERSION_CODE=$(($NUM + $INITIAL_VERSION_CODE))" >> $GITHUB_ENV
 
