@@ -10,15 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Read version.properties file
-        uses: BrycensRanch/read-properties-action@v1
-        id: version
-        with:
-          file: ci-versions.properties
-          property: versionCode
-          default: 1000
-      
+    steps:      
       - name: Increment version code
         env:
           NUM: ${{ github.run_number }}
